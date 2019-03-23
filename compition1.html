@@ -1,0 +1,161 @@
+<html>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	
+	<!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<title>calculater</title>
+<script>
+    function input(x)
+    {
+        document.form.show.value+=x;
+    }
+    function addition()
+    {
+        document.form.show.value+='+';
+    }
+    function multiplication()
+    {
+        document.form.show.value+='*';
+    }
+    function division()
+    {
+        document.form.show.value+='/';
+    }
+    function reminder()
+    {
+        document.form.show.value+='%';
+    }
+    function dot(x)
+    {
+        document.form.show.value+='.';
+    }
+    function subterction()
+    {
+        document.form.show.value+='-';
+    }
+    function allclear()
+    {
+        document.form.show.value='';
+    }
+    function delet()
+    {
+        var y=document.form.show.value;
+        document.form.show.value=y.substring(0,y.length-1);
+    }
+    function equal(){
+            var y = document.form.show.value;
+                document.form.show.value = eval(y);
+        }
+</script>
+<style>
+    #b{
+        height: 100px;width:100px;font-size: 50px;
+    }
+    #a{
+        height: 100px;width:220px;font-size:50px;
+    }
+    body{
+        background-color:grey;
+    }
+    h1{
+        color:rgb(247, 240, 240);
+        font-family: 'Lucida fax';
+    }
+    #c{
+        height: 70px;width: 440px;border: 3px solid black;
+        font-size: 50px;
+    }
+</style>
+<body>
+        <form name="form">
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4"><br/>
+            
+            <h1>CALCULATER</h1>
+            <input type="taxt" id="c" name="show">
+        </div>             
+        <div class="col-sm-4"></div>
+    </div>    
+    <div class="row"><br/>
+        <div class="col-sm-4"></div>
+        <div class="col-sm-1">
+            <button type="button" id="b" onclick="allclear()">AC</button>
+        </div>
+        <div class="col-sm-1">
+            <button type="button" id="b" onclick="delet()">del</button>
+        </div>
+        <div class="col-sm-1">
+            <button type="button" id="b" onclick="reminder()">%</button>
+        </div>
+        <div class="col-sm-1">
+            <button type="button" id="b" onclick="division()">/</button>
+        </div>
+        <div class="col-sm-4"></div>
+    </div>
+    <div class="row"><br/>
+        <div class="col-sm-4" ></div>
+        <div class="col-sm-1">
+            <button type="button" id="b" onclick="input(7)">7</button>
+        </div>
+        <div class="col-sm-1">
+            <button type="button" id="b" onclick="input(8)">8</button>
+        </div>
+        <div class="col-sm-1">
+            <button type="button" id="b"onclick="input(9)">9</button>
+        </div>
+        <div class="col-sm-1">
+            <button type="button" id="b" onclick="multiplication()">*</button>
+        </div>
+        <div class="col-sm-4"></div>
+    </div>
+    <div class="row"><br/>
+        <div class="col-sm-4"></div>
+        <div class="col-sm-1">
+            <button type="button" id="b" onclick="input(4)">4</button>
+        </div>
+        <div class="col-sm-1">
+            <button type="button" id="b" onclick="input(5)">5</button>
+        </div>
+        <div class="col-sm-1">
+            <button type="button" id="b" onclick="input(6)">6</button>
+        </div>
+        <div class="col-sm-1">
+            <button type="button" id="b" onclick="subterction()">-</button>
+        </div>
+        <div class="col-sm-4"></div>
+    </div>
+    <div class="row"><br/>
+        <div class="col-sm-4"></div>
+        <div class="col-sm-1">
+            <button type="button" id="b" onclick="input(1)">1</button>
+        </div>
+        <div class="col-sm-1">
+            <button type="button" id="b" onclick="input(2)">2</button>
+        </div>
+        <div class="col-sm-1">
+            <button type="button" id="b" onclick="input(3)">3</button>
+        </div>
+        <div class="col-sm-1">
+            <button type="button" id="b" onclick="addition()">+</button>            
+        </div>
+        <div class="col-sm-4"></div>
+    </div>
+    <div class="row"><br/>
+        <div class="col-sm-4"></div>
+        <div class="col-sm-1">
+            <button type="button" id="b" onclick="dot()">.</button>
+        </div>
+        <div class="col-sm-1">
+            <button type="button" id="b" onclick="input(0)">0</button>
+        </div>
+        <div class="col-sm-2">
+            <button type="button" id="a" onclick="equal()">=</button>
+        </div>
+        <div class="col-sm-4"></div>
+    </div></form>
+</body>
+</html>
